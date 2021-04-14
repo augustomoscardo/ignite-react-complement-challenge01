@@ -24,11 +24,10 @@ interface MovieProps {
 }
 
 interface SideBarProps {
-  onSelectedGenre: (genre: number) => void;
   isSelected: number;
 }
 
-export function Content({ isSelected, onSelectedGenre }: SideBarProps) {
+export function Content({ isSelected }: SideBarProps) {
   // Complete aqui
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
   const [movies, setMovies] = useState<MovieProps[]>([]);
